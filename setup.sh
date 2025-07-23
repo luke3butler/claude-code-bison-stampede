@@ -597,7 +597,8 @@ main() {
     echo -e "   ${YELLOW}claude mcp list${NC}"
     echo ""
     echo "3. Start using Claude Code in your projects:"
-    echo -e "   ${YELLOW}cd your-project && claude${NC}"
+    echo -e "   ${YELLOW}cd your-project${NC}"
+    echo -e "   ${YELLOW}claude${NC}"
     echo ""
     echo -e "${BLUE}Enjoy your enhanced Claude Code development! 🚀${NC}"
     

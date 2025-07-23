@@ -5,13 +5,13 @@ A streamlined setup tool for enhancing your Claude Code CLI experience with MCP 
 ## Quick Install
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/luke3butler/claude-code-bison-stampede/main/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/luke3butler/claude-code-bison-stampede/refs/heads/main/setup.sh | bash
 ```
 
 Or for automated installation (skip all prompts):
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/luke3butler/claude-code-bison-stampede/main/setup.sh | bash -s -- --yes
+curl -sSL https://raw.githubusercontent.com/luke3butler/claude-code-bison-stampede/refs/heads/main/setup.sh | bash -s -- --yes
 ```
 
 ## What It Does
@@ -26,19 +26,24 @@ This setup tool automatically configures your development environment with:
 ## Features
 
 ### 🚀 One-Command Setup
+
 Run a single command to get a fully configured Claude Code development environment.
 
 ### 🤖 MCP Server Integration
+
 Pre-configured Atlassian MCP server for seamless Jira and Confluence workflow integration.
 
 ### 🛠️ Essential Development Tools
+
 Automatically installs CLI tools that enhance Claude Code's capabilities:
+
 - `fzf` - Interactive file/text selection
-- `jq` - JSON parsing and manipulation  
+- `jq` - JSON parsing and manipulation
 - `yq` - YAML parsing and manipulation
 - `ripgrep` - Fast file content searching
 
 ### 📋 Workflow Templates
+
 Includes structured command templates for common development tasks (available in the repository).
 
 ## Requirements
@@ -91,6 +96,7 @@ claude
 ## Architecture
 
 This is "Bison Stampede v1" - a focused setup tool that prioritizes core Claude Code CLI functionality:
+
 - Claude Code CLI installation and configuration
 - User-level MCP server setup
 - Essential development tool installation
