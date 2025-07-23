@@ -55,27 +55,31 @@ done
 SCRIPTS_INSTALL_DIR="$CLAUDE_DIR/scripts"
 COMMANDS_INSTALL_DIR="$CLAUDE_DIR/commands"
 
-# Clone or update the repo in ~/.claude-code-bison-stampede
-if [ ! -d "$CLAUDE_CODE_BISON_DIR" ]; then
-    echo -e "${YELLOW}📥 Cloning Bison Stampede setup to $CLAUDE_CODE_BISON_DIR...${NC}"
-    if git clone "$REPO_URL" "$CLAUDE_CODE_BISON_DIR" 2>/dev/null; then
-        echo -e "${GREEN}✅ Repository cloned successfully${NC}"
-    else
-        echo -e "${RED}❌ Failed to clone repository${NC}"
-        echo "Please check your internet connection and repository URL."
-        exit 1
-    fi
-else
-    echo -e "${YELLOW}📥 Updating existing repository at $CLAUDE_CODE_BISON_DIR...${NC}"
-    if cd "$CLAUDE_CODE_BISON_DIR" && git pull 2>/dev/null; then
-        echo -e "${GREEN}✅ Repository updated successfully${NC}"
-    else
-        echo -e "${YELLOW}⚠️  Failed to update repository (continuing with existing version)${NC}"
-    fi
-fi
+# DISABLED: Clone or update the repo in ~/.claude-code-bison-stampede - Bison Stampede v1 simplification
+# Focus on core Claude Code CLI + MCP setup without git dependency
+echo -e "${BLUE}📂 Skipping repository management (v1 focuses on standalone setup)${NC}"
+echo ""
 
-# Set the helpers directory to our maintained repo
-CLAUDE_HELPERS_DIR="$CLAUDE_CODE_BISON_DIR"
+# if [ ! -d "$CLAUDE_CODE_BISON_DIR" ]; then
+#     echo -e "${YELLOW}📥 Cloning Bison Stampede setup to $CLAUDE_CODE_BISON_DIR...${NC}"
+#     if git clone "$REPO_URL" "$CLAUDE_CODE_BISON_DIR" 2>/dev/null; then
+#         echo -e "${GREEN}✅ Repository cloned successfully${NC}"
+#     else
+#         echo -e "${RED}❌ Failed to clone repository${NC}"
+#         echo "Please check your internet connection and repository URL."
+#         exit 1
+#     fi
+# else
+#     echo -e "${YELLOW}📥 Updating existing repository at $CLAUDE_CODE_BISON_DIR...${NC}"
+#     if cd "$CLAUDE_CODE_BISON_DIR" && git pull 2>/dev/null; then
+#         echo -e "${GREEN}✅ Repository updated successfully${NC}"
+#     else
+#         echo -e "${YELLOW}⚠️  Failed to update repository (continuing with existing version)${NC}"
+#     fi
+# fi
+
+# DISABLED: Set the helpers directory to our maintained repo
+# CLAUDE_HELPERS_DIR="$CLAUDE_CODE_BISON_DIR"
 
 # Detect OS and package manager
 detect_platform() {
