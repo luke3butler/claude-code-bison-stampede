@@ -472,7 +472,6 @@ setup_global_claude_md() {
     echo ""
     return 0
 }
-}
 
 # Setup MCP servers at user level
 setup_mcp_servers() {
