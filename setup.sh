@@ -136,7 +136,7 @@ install_homebrew() {
         
         if [[ "$response" =~ ^[Yy]$ ]]; then
             echo -e "${YELLOW}📥 Installing Homebrew...${NC}"
-            if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
+            if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/tty; then
                 # Add Homebrew to PATH for this session
                 if [[ -d "/opt/homebrew" ]]; then
                     eval "$(/opt/homebrew/bin/brew shellenv)"
